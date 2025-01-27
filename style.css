@@ -1,0 +1,91 @@
+#app {
+  width: 75%;
+  margin: 0 auto;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  gap: 8em;
+}
+
+.required {
+  color: red;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-task {
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  background-color: #04aa6d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1rem;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04aa6d;
+  color: white;
+}
+
+table th:first-child {
+  width: 30em;
+}
+
+table th:last-child {
+  width: 10em;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+}
+
+input[type="checkbox"] {
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 50%;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+}
+
+.first-row {
+  padding: 0.5em;
+}
+
+.last-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+.check-label {
+  font-size: 0.9rem;
+}

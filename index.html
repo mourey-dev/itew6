@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Task Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Task Tracker</h1>
+      <section>
+        <div>
+          <div class="input-group">
+            <label for="task"><b>New Task</b><b class="required">*</b></label>
+            <input
+              v-model="newTask"
+              type="text"
+              id="task"
+              placeholder="Ex. I will code today."
+              required
+            />
+          </div>
+          <button @click="addTask" type="button" class="add-task">
+            Add Task
+          </button>
+          <div>
+            <p>Total Task: {{totalTask}}</p>
+            <p>Completed Task: {{completedTask}}</p>
+            <p>{{statusMessage}}</p>
+          </div>
+        </div>
+
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                is="task"
+                v-for="(task, index) in tasks"
+                :key="index"
+                :task="task"
+                :delete-task="deleteTask"
+              ></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
